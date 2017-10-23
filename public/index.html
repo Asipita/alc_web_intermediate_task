@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <link rel="stylesheet" type="" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/ionicons.min790f.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="leftPartition col s2 white side-nav fixed z-depth-4">
+            <div class="top teal card center">
+                <a class="browser-default" href="index.html"><i class="center white-text personIcon ion-android-person"></i></a>
+                <br>
+                <p class="white-text">Admin access Page</p>
+            </div>
+
+
+            <div class="access-links row">
+                <a href="" class="card col s12 hoverable" id="create_resource_button" onclick="return false">  Create Resource <i class="ion-person-add right"></i></a>
+                <a href="" class="card col s12 hoverable" id="show_resource_button" onclick="return false">Show Resource <i class="ion-ios-eye right" ></i></a>
+                <a href="" class="card col s12 hoverable" id="update_resource_button" onclick="return false">Update Resource <i class="ion-gear-b right"></i></a>
+                <a href="" class="card col s12 hoverable" id="delete_resource_button" onclick="return false">Delete Resource <i class="ion-android-delete right"></i></a>
+
+            </div>
+
+        </div>
+        <div class=" rightPartition col s10 right">
+
+            <nav class="nav teal" id="navbar">
+                <p class="madmin">Resource management administrator</p>
+            </nav>
+            <div class="first_table">
+            </div>
+            <div class="first_page">
+                <div class="intro flow-text">
+
+                    <p> <span class="bold x-25 teal-text text-darken-4">Welcome</span> to the official admin page, this page contains access points that allow you to make changes to database content.</p>
+                </div>
+
+                <div class="you-can center flow-text red-text x-25">
+                    You can...
+                </div>
+
+                <div class="explained_content white-text">
+                    <div class="col s12 m3">
+                        <div class="card green darken-3 hoverable">
+                            <div class="card-title">
+                                <span class="bold">Create a resource</span>
+                            </div>
+                            <div class="card-content flow-text x-13 ">
+                                create Resource database for both new and old students (that have not been previously registered).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card purple darken-3 hoverable">
+                            <div class="card-title">
+                                <span class="bold">list a resource</span>
+                            </div>
+
+                            <div class="card-content flow-text x-13">
+                                in order to read a particular result to verify correctness, or to list all the student resources in the database.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card blue darken-3 hoverable">
+                            <div class="card-title">
+                                <span class="bold">Update a resource</span>
+                            </div>
+
+                            <div class="card-content flow-text x-13">
+                                to update existing student resource or to efffect changes or to correct errors in the resource database.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card red darken-3 hoverable">
+                            <div class="card-title">
+                                <span class="bold">Delete a resource</span>
+                            </div>
+
+                            <div class="card-content flow-text x-13">
+                                this deals with the intricacies of deleting resource(S) from the database, resources deleted are permanently lost.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<footer class="card teal">-->
+                <div class="center flow-text foot">
+                    <p class="center">Shuaib Abdulghaffar &copy; 2017 all rights reserved</p>
+                </div>
+
+                <!--</footer>-->
+
+            </div>
+
+            <form id="create_form" class="card forms">
+                <!--<p class="flow-text center info white-text">create students' resource</p>-->
+                <div class="row">
+                    <div class="col s12 m6 l4 input-field">
+                        <label for="surname">Surname</label>
+                        <input type="text" id="surname" name="surname" value="" required>
+                    </div>
+                    <div class="name-field col s12 m6 l4 input-field">
+                        <label for="firstname">Firstname</label>
+                        <input type="text" id="firstname" name="firstname" value="" required>
+                    </div>
+                    <div class="name-field col s12 m6 l4 input-field">
+                        <label for="lastname">Last name</label>
+                        <input type="text" id="lastname" name="lastname" value="" required>
+                    </div>
+                </div>
+                <div class="gender_section row">
+
+                    <div class="col s12 m5">
+                        <label for="date_of_birth">Date Of Birth</label>
+                        <input type="date" name="date_of_birth" id="date_of_birth" class="date-picker" required>
+                    </div>
+                    <div class="col s12 m6 l5 right gender">
+                        <!--<label for="gender">Gender</label>-->
+                        <p class="col s6">
+                            <input name="gender" type="radio" id="male_gender" class="with-gap" value="male" required/>
+                            <label for="male_gender">Male</label>
+                        </p>
+                        <p class="col s6">
+                            <input name="gender" type="radio" id="female_gender" value="female" required />
+                            <label for="female_gender">Female</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="private_details row">
+                    <div class="col s12 m6">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" name="nationality" id="nationality" required>
+                    </div>
+                    <div class="col s12 m6">
+                        <label for="state_of_origin">State Of Origin</label>
+                        <input type="text" name="state_of_origin" id="state_of_origin" required>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <label for="admission_number">Admission Number</label>
+                        <input type="text" name="admission_number" id="admission_number" required>
+                    </div>
+
+                </div>
+                <div class="class_and_date">
+                    <div class="row">
+                        <div class="col s6 m3">
+                            <label for="class_in">Entry class</label>
+                            <input type="text" id="class_in" name="class_in" required>
+                        </div>
+                        <div class="col s6 m3">
+                            <label for="class_out">Exit class</label>
+                            <input type="text" id="class_out" name="class_out">
+                        </div>
+                        <div class="col s6 m3">
+                            <label for="entry_date">Entry Date</label>
+                            <input type="date" id="entry_date" name="entry_date" class="date-picker" required>
+
+                        </div>
+                        <div class="col s6 m3">
+                            <label for="exit_date">Exit date</label>
+                            <input type="date" id="exit_date" name="exit_date" class="date-picker">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn" id="create_submit" value="create resource" onclick="return false">
+
+            </form>
+            <form id="list_form" class="card forms">
+                <p class="flow-text info grey-text text-darken-2">Enter the admission number of students whose resource you want to read.</p>
+                <div class="row">
+                    <div class="col s12 input-field">
+                        <input type="text" id="list_admission_number" name="admission_number" placeholder="admission number">
+                    </div>
+
+                    <input type="submit" class="btn" id="list_submit" value="list resource" onclick="return false">
+                    <input type="submit" class="btn right" id="list_all_submit" value="list all" onclick="return false">
+
+                </div>
+
+            </form>
+            <form action="" id="delete_form" class="card forms">
+                <p class="flow-text info grey-text text-darken-2">Enter the admission number of students whose resource you want to delete.</p>
+                <label for="delete_admission_number">Admission Number </label>
+                <input type="text" id="delete_admission_number" name="admission_number">
+
+                <input type="submit" id="delete_resource" class="btn" value="Delete resources" onclick="return false">
+                <input type="submit" id="delete_all_resource_button" class="btn right" value="Delete all resources" onclick="return false">
+            </form>
+            <form action="" id="resource_update_form" class="card forms">
+                <p class="flow-">
+                    The only compulsory field is the admission number, which filters the resource, and apply the changes to the file with that specific admission number.
+                </p>
+
+                <div class="col s12">
+                    <label for="patch_admission_number">Admission Number</label>
+                    <input type="text" name="admission_number" id="patch_admission_number" required>
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <label for="patch_surname">Surname</label>
+                        <input type="text" id="patch_surname" name="surname" value="">
+                    </div>
+                    <div class="col s12">
+                        <label for="patch_firstname">Firstname</label>
+                        <input type="text" id="patch_firstname" name="firstname" value="">
+                    </div>
+                    <div class="col s12">
+                        <label for="patch_lastname">Last name</label>
+                        <input type="text" id="patch_lastname" name="lastname" value="">
+                    </div>
+                </div>
+                <div class="gender_section row">
+
+                    <div class="col s12">
+                        <label for="patch_date_of_birth">Date Of Birth</label>
+                        <input type="date" name="date_of_birth" id="patch_date_of_birth" class="date-picker">
+                    </div>
+                    <div class="col s12 gender">
+                        <!--<label for="gender">Gender</label>-->
+                        <p class="col s6">
+                            <input name="gender" type="radio" id="patch_male_gender" class="with-gap" value="male" />
+                            <label for="patch_male_gender">Male</label>
+                        </p>
+                        <p class="col s6">
+                            <input name="gender" type="radio" id="patch_female_gender" value="female" />
+                            <label for="patch_female_gender">Female</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="private_details row">
+                    <div class="col s12">
+                        <label for="patch_nationality">Nationality</label>
+                        <input type="text" name="nationality" id="patch_nationality">
+                    </div>
+                    <div class="col s12">
+                        <label for="patch_state_of_origin">State Of Origin</label>
+                        <input type="text" name="state_of_origin" id="patch_state_of_origin">
+                    </div>
+
+                </div>
+                <div class="class_and_date">
+                    <div class="row">
+                        <div class="col s6">
+                            <label for="patch_class_in">Entry class</label>
+                            <input type="text" id="patch_class_in" name="class_in">
+                        </div>
+                        <div class="col s6">
+                            <label for="patch_class_out">Exit class</label>
+                            <input type="text" id="patch_class_out" name="class_out">
+                        </div>
+                        <div class="col s6">
+                            <label for="patch_entry_date">Entry Date</label>
+                            <input type="date" id="patch_entry_date" name="entry_date" class="date-picker">
+
+                        </div>
+                        <div class="col s6">
+                            <label for="patch_exit_date">Exit date</label>
+                            <input type="date" id="patch_exit_date" name="exit_date" class="date-picker">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn" id="update_submit" value="update resource" onclick="return false">
+            </form>
+        </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
