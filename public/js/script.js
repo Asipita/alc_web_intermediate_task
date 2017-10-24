@@ -146,7 +146,7 @@ var increaseRows = (result) => {
     for (var i = 0; i < count; i++) {
         $('.results-container').show();
         $('.list_body').append(`
-                <tr class="black-text text-darken-2 card">
+                <tr class="black-text text-darken-2">
                     <td>${result[i].surname} ${result[i].firstname} ${result[i].lastname}</td>
                     <td>${result[i].date_of_birth}</td>
                     <td>${result[i].nationality}</td>

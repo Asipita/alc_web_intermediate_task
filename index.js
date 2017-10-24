@@ -56,6 +56,7 @@ app.post('/list_resource', (req, res) => {
     createModel
         .find({ admission_number })
         .then((data) => {
+            // console.log(data)
             res.send(data)
         }, (e) => {
             res.send('bad')
@@ -92,6 +93,10 @@ app.patch('/update_resource', (req, res) => {
     // console.log(req.body);
     var objects = {};
 
+    if (admission_number === '') {
+        return res.send(`The admission number field should not be blank`)
+    }
+
     for (x in req.body) {
         if (x === 'admission_number') {
             continue;
@@ -99,7 +104,6 @@ app.patch('/update_resource', (req, res) => {
             objects[x] = req.body[x];
         }
     }
-    // console.log(objects)
 
     createModel
         .findOneAndUpdate({
@@ -112,7 +116,7 @@ app.patch('/update_resource', (req, res) => {
         .then((data) => {
             res.send(`The resource was successfully updated`)
         }, (err) => {
-            res.send(`The data was successfully updated`)
+            res.send(`error! id ${admission_number} was not found`)
         })
 
 })

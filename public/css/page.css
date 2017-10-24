@@ -39,7 +39,8 @@ body {
       font-size: 1rem; }
   body .rightPartition {
     padding: 1rem !important;
-    min-height: 100vh !important; }
+    min-height: 100vh !important;
+    background: #efeaea; }
     body .rightPartition .card-title > span {
       font-size: 1.2rem;
       padding-left: .5rem; }
