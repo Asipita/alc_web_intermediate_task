@@ -10,8 +10,7 @@
     "author": "Shuaib Abdulghaffar",
     "license": "ISC",
     "engines": {
-        "node": "8.5.0",
-
+        "node": "8.5.0"
     },
     "dependencies": {
         "body-parser": "^1.18.2",
