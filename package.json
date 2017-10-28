@@ -4,12 +4,14 @@
     "description": "a web page that helps to CRUD students resources",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node index.js"
     },
     "author": "Shuaib Abdulghaffar",
     "license": "ISC",
     "engines": {
-        "node": "8.5.0"
+        "node": "8.5.0",
+
     },
     "dependencies": {
         "body-parser": "^1.18.2",
