@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 const { createModel } = require('./models/createModel')
 
-const port = process.env.port || 2000;
+const port = process.env.PORT || 2000;
 
 var app = express();
 app.use(express.static(__dirname + "/public"))
@@ -124,5 +124,5 @@ app.patch('/update_resource', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`app running on port 2000`);
+    console.log(`app running on port ${port}`);
 })
