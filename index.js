@@ -14,7 +14,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/alctask', { useMongoClient: true });
+
+let uri = 'mongodb://heroku_64jp7z74:h6e47mt882sotignsrh82nikjb@ds127988.mlab.com:27988/heroku_64jp7z74'
+
+// mongoose.connect('mongodb://localhost:27017/alctask', { useMongoClient: true });
+
+mongoose.connect(uri, { useMongoClient: true });
 
 
 app.post('/create_resource', (req, res) => {
