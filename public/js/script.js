@@ -1,23 +1,29 @@
 $('#create_form, #list_form, #delete_form, #resource_update_form ').hide();
 
-$('#create_resource_button').on('click', () => {
+$('.hidden_links').hide();
+
+$('.bar_menu').on('click', () => {
+    $('.hidden_links').toggle('show')
+})
+
+$('#create_resource_button, #create_resource_link').on('click', () => {
     $('.first_page, #list_form, #delete_form, #resource_update_form, .first_table').hide();
     $('#create_form').show();
 
 })
 
-$('#show_resource_button').on('click', () => {
+$('#show_resource_button, #list_resource_link').on('click', () => {
     $('.first_page, #create_form, #delete_form, #resource_update_form, .first_table').hide();
     $('#list_form').show();
 
 })
 
-$('#delete_resource_button').on('click', () => {
+$('#delete_resource_button, #delete_resource_link').on('click', () => {
     $('.first_page, #create_form, #list_form, #resource_update_form, .first_table').hide();
     $('#delete_form').show();
 })
 
-$('#update_resource_button').on('click', () => {
+$('#update_resource_button, #update_resource_link').on('click', () => {
     $('.first_page, #create_form, #list_form, #delete_form, .first_table').hide();
     $('#resource_update_form').show()
 

@@ -1,5 +1,8 @@
 body {
     padding: 0;
+    min-height: 100vh;
+    position: relative;
+    // padding-bottom: 3rem;
     .x-5 {
         font-size: .5rem;
     }
@@ -80,6 +83,7 @@ body {
             margin-top: -1rem;
             p {
                 margin-left: 1rem;
+                margin-right: 1rem;
                 font-weight: bolder;
                 font-size: 1.1rem;
             }
@@ -89,12 +93,8 @@ body {
     form {
         width: 80vw;
         margin: 0 auto;
+        padding-bottom: 1rem !important;
         font-family: monospace;
-    }
-    .foot {
-        position: absolute;
-        top: 70vh;
-        left: 20%
     }
     .first_page {
         position: relative;

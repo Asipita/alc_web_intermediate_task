@@ -1,5 +1,7 @@
 body {
-  padding: 0; }
+  padding: 0;
+  min-height: 100vh;
+  position: relative; }
   body .x-5 {
     font-size: .5rem; }
   body .x1 {
@@ -57,16 +59,14 @@ body {
       margin-top: -1rem; }
       body .rightPartition #navbar p {
         margin-left: 1rem;
+        margin-right: 1rem;
         font-weight: bolder;
         font-size: 1.1rem; }
   body form {
     width: 80vw;
     margin: 0 auto;
+    padding-bottom: 1rem !important;
     font-family: monospace; }
-  body .foot {
-    position: absolute;
-    top: 70vh;
-    left: 20%; }
   body .first_page {
     position: relative; }
   body .forms {

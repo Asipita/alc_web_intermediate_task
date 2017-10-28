@@ -12,7 +12,7 @@
 
 <body>
     <div class="row">
-        <div class="leftPartition col s2 white side-nav fixed z-depth-4">
+        <div class="leftPartition col s2 white side-nav fixed z-depth-4 hide-on-small">
             <div class="top teal card center">
                 <a class="browser-default" href="index.html"><i class="center white-text personIcon ion-android-person"></i></a>
                 <br>
@@ -29,10 +29,18 @@
             </div>
 
         </div>
-        <div class=" rightPartition col s10 right">
+        <div class=" rightPartition col l10 m12 s12 right">
 
             <nav class="nav teal" id="navbar">
-                <p class="madmin">Resource management administrator</p>
+                <p class="madmin hide-on-med-and-down">Resource management administrator</p>
+                <p class="madmin hide-on-large-only flow-text"> <a href="index.html"><i class="ion-android-home left"></a></i> Resource Management Administrator <i class="ion-android-menu right bar_menu"></i></p>
+
+            </nav>
+            <nav class="teal row card hidden_links">
+                <a href="" id="create_resource_link" class="hoverable center col s3" onclick="return false">Create</a>
+                <a href="" id="list_resource_link" class="hoverable center col s3" onclick="return false">Read</a>
+                <a href="" id="update_resource_link" class="hoverable center col s3" onclick="return false">Update</a>
+                <a href="" id="delete_resource_link" class="hoverable center col s3" onclick="return false">Delete</a>
             </nav>
             <div class="first_table">
             </div>
@@ -47,7 +55,7 @@
                 </div>
 
                 <div class="explained_content white-text">
-                    <div class="col s12 m3">
+                    <div class="col s12 m6 l3">
                         <div class="card green darken-3 hoverable">
                             <div class="card-title">
                                 <span class="bold">Create a resource</span>
@@ -57,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m3">
+                    <div class="col s12 m6 l3">
                         <div class="card purple darken-3 hoverable">
                             <div class="card-title">
                                 <span class="bold">list a resource</span>
@@ -68,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m3">
+                    <div class="col s12 m6 l3">
                         <div class="card blue darken-3 hoverable">
                             <div class="card-title">
                                 <span class="bold">Update a resource</span>
@@ -79,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s12 m3">
+                    <div class="col s12 m6 l3">
                         <div class="card red darken-3 hoverable">
                             <div class="card-title">
                                 <span class="bold">Delete a resource</span>
@@ -92,16 +100,14 @@
                     </div>
                 </div>
                 <!--<footer class="card teal">-->
-                <div class="center flow-text foot">
-                    <p class="center">Shuaib Abdulghaffar &copy; 2017 all rights reserved</p>
-                </div>
 
                 <!--</footer>-->
 
             </div>
 
-            <form id="create_form" class="card forms">
-                <!--<p class="flow-text center info white-text">create students' resource</p>-->
+
+            <form id="create_form" class="card forms col s12">
+
                 <div class="row">
                     <div class="col s12 m6 l4 input-field">
                         <label for="surname">Surname</label>
@@ -173,7 +179,7 @@
                 <input type="submit" class="btn" id="create_submit" value="create resource" onclick="return false">
 
             </form>
-            <form id="list_form" class="card forms">
+            <form id="list_form" class="card forms col s12">
                 <p class="flow-text info grey-text text-darken-2">Enter the admission number of students whose resource you want to read.</p>
                 <div class="row">
                     <div class="col s12 input-field">
@@ -186,15 +192,15 @@
                 </div>
 
             </form>
-            <form action="" id="delete_form" class="card forms">
+            <form action="" id="delete_form" class="card forms col s12">
                 <p class="flow-text info grey-text text-darken-2">Enter the admission number of students whose resource you want to delete.</p>
                 <label for="delete_admission_number">Admission Number </label>
                 <input type="text" id="delete_admission_number" name="admission_number">
 
                 <input type="submit" id="delete_resource" class="btn" value="Delete resources" onclick="return false">
-                <input type="submit" id="delete_all_resource_button" class="btn right" value="Delete all resources" onclick="return false">
+                <!--<input type="submit" id="delete_all_resource_button" class="btn right modal-trigger" value="Delete all resources" onclick="return false" href="#delete_all_modal">-->
             </form>
-            <form action="" id="resource_update_form" class="card forms">
+            <form action="" id="resource_update_form" class="card forms col s12">
                 <p class="flow-">
                     The only compulsory field is the admission number, which filters the resource, and apply the changes to the file with that specific admission number.
                 </p>
@@ -270,6 +276,11 @@
                 </div>
                 <input type="submit" class="btn" id="update_submit" value="update resource" onclick="return false">
             </form>
+
+
+            <div class="center flow-text foot row">
+                <p class="center col s12">Shuaib Abdulghaffar &copy; 2017 all rights reserved</p>
+            </div>
         </div>
         <script src="js/jquery.min.js"></script>
         <script src="js/materialize.min.js"></script>
